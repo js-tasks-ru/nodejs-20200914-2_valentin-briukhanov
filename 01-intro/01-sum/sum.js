@@ -1,8 +1,8 @@
 function sum(a, b) {
-  /* ваш код */
-  if (typeof(a) !== 'number' || typeof(b) !== 'number') {
-    throw new TypeError('Both arguments should be numbers.');
+  if ([a, b].some((value) => typeof value !== 'number')) {
+    throw new TypeError();
   }
+
   return a + b;
 }
 
